@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Keil",
+            "compilerPath": "${workspaceFolder}\\.vscode\\compileKeil.bat",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Keil5/C51/INC/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__CC_ARM",
+                "pin=/**/",
+                "sfr=/**/",
+                "sfr16=/**/",
+                "idata=/**/",
+                "bdata=/**/",
+                "data=/**/",
+                "xdata=/**/",
+                "code=/**/",
+                "sbit=/**/",
+                "at=/**/",
+                "interrupt=/**/"
+            ],
+            "cStandard": "c99",
+            "compilerArgs": [
+                "\"${workspaceFolder}\"",
+                "\"${workspaceFolder}\\src\"",
+                "main"
+            ]
+        }
+    ],
+    "version": 4
+}
