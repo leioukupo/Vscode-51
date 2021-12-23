@@ -25,3 +25,6 @@
 > 2. 选择运行生成任务
 
 ![使用菜单](readme.assets/%E4%BD%BF%E7%94%A8%E8%8F%9C%E5%8D%95.png)  
+# 问题
+> 涉及多个文件编译时会vscode会提示UNRESOLVED EXTERNAL SYMBOL 和 REFERENCE MADE TO UNRESOLVED EXTERNAL       
+> 但是不影响编译,编译依旧成功无误
