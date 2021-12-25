@@ -28,6 +28,7 @@
 # 问题
 > 涉及多个文件编译时会vscode会提示UNRESOLVED EXTERNAL SYMBOL 和 REFERENCE MADE TO UNRESOLVED EXTERNAL       
 > 但是不影响编译,编译依旧成功无误
+> 文件名字过长会导致编译时无法补全文件名字
 # 解决办法
 >关闭vscode底栏问题
 >在其他工作区出问题时会再次出现,问题解决后又会自动消失.所以我觉得这是一个完美的解决办法
