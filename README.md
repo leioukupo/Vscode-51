@@ -27,7 +27,7 @@
 ![使用菜单](readme.assets/%E4%BD%BF%E7%94%A8%E8%8F%9C%E5%8D%95.png)  
 # 问题
 > 涉及多个文件编译时会vscode会提示UNRESOLVED EXTERNAL SYMBOL 和 REFERENCE MADE TO UNRESOLVED EXTERNAL       
-> 但是不影响编译,编译依旧成功无误
+> 但是不影响编译,编译依旧成功无误           
 > 文件名字过长会导致编译时无法补全文件名字
 # 解决办法
 >关闭vscode底栏问题
