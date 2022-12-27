@@ -1,27 +1,25 @@
 @echo off
-set KEIL_BIN_FOLDER=D:\Keil5\C51\BIN
-
+@REM %1是工作区路径
+@REM %2是文件路径
+@REM %3不带后缀的文件名
+set KEIL_BIN_FOLDER=D:\Keil\C51\BIN
+set obj_list=
 cls
 echo Keil Compiler batch by leioukupo
 echo Compiler path is %KEIL_BIN_FOLDER%
 
+cd /d "%2"
+
+for /f "delims=" %%i in ('dir /b *.c') do (call "%KEIL_BIN_FOLDER%\C51.EXE" "%%i")
+for /f "delims=" %%i in ('dir /b *.LST') do (move "%%i" "%1\build" > NUL || goto failed)
+for /f "delims=" %%i in ('dir /b *.OBJ') do (move "%%i" "%1\build" > NUL || goto failed)
+echo "move over"
 cd /d "%1\build"
-
-call "%KEIL_BIN_FOLDER%\C51.EXE" "%2\%3.c" 
-move "%2\%3.LST" "%1\build" > NUL || goto failed
-move "%2\%3.OBJ" "%1\build" > NUL || goto failed
-
-call "%KEIL_BIN_FOLDER%\BL51.EXE" "%1\build\%3.OBJ" TO %3 
-call "%KEIL_BIN_FOLDER%\OH51.EXE" "%1\build\%3" || goto failed
-move %1\build\%3 %1\obj
-move %1\build\%3.LST %1/obj
-move %1\build\%3.OBJ %1/obj
-move %1\build\%3.M51 %1/obj
-
+call %1\.vscode\hex.bat %3
+del %1\build\%3
+for /f "delims=" %%i in ('dir /b *.LST') do (del %1\build\%%i )
+for /f "delims=" %%i in ('dir /b *.OBJ') do (del %1\build\%%i )
+for /f "delims=" %%i in ('dir /b *.M51') do (del %1\build\%%i )
 echo Compiled successfully: build\%3.hex
 exit 0
 
-:failed
-set ERRCODE=%errorlevel%
-echo Compilation Failed: Code %ERRCODE%
-exit %ERRCODE%
