@@ -7,29 +7,41 @@
                 "${workspaceFolder}/**",
                 "D:/Keil5/C51/INC/**"
             ],
-            "defines": [
+           "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
                 "__CC_ARM",
-                "pin=/**/",
-                "sfr=/**/",
-                "sfr16=/**/",
-                "idata=/**/",
-                "bdata=/**/",
-                "data=/**/",
-                "xdata=/**/",
-                "code=/**/",
-                "sbit=/**/",
-                "at=/**/",
-                "interrupt=/**/"
+                "__C51__",
+                "__VSCODE_C51__",
+                "reentrant=",
+                "compact=",
+                "small=",
+                "large=",
+                "data=",
+                "idata=",
+                "pdata=",
+                "bdata=",
+                "xdata=",
+                "code=",
+                "bit=char",
+                "sbit=char",
+                "sfr=char",
+                "sfr16=int",
+                "sfr32=int",
+                "interrupt=",
+                "using=",
+                "_at_=",
+                "_priority_=",
+                "_task_="
             ],
             "cStandard": "c99",
             "compilerArgs": [
                 "\"${workspaceFolder}\"",
                 "\"${workspaceFolder}\\src\"",
                 "main"
-            ]
+            ],
+            "intelliSenseMode": "${default}"
         }
     ],
     "version": 4
