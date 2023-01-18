@@ -16,6 +16,8 @@
                 "D:/Keil5/C51/INC/**"
             ],
 ```
+> 修改hex.bat的keil路径
+> 将 **KEIL_BIN_FOLDER** 更改为你的keil的BIN目录 例如 **D:\Keil5\C51\BIN**
 # 编译方法
 + ## 快捷键
 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> 
